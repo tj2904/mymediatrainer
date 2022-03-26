@@ -10,7 +10,7 @@ function Home() {
             <h1 class="font-weight-light">My Media Trainer</h1>
             <p>
               This is a temporary holding Main/Home page.</p>
-              <p>Using the links in the Navigation bar to see other pages and content.</p>
+              <p>Use the links in the Navigation bar to see other pages and with content layouts.</p>
           </div>
         </div>
       </div>
