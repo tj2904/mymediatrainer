@@ -7,14 +7,24 @@ function Navigation() {
       <nav className="navbar navbar-expand navbar-light bg-light">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            My Media Trainer
+          <i class="bi bi-camera-reels-fill"></i>
+          &nbsp;&nbsp;My Media Trainer
           </NavLink>
           <div>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/">
                   Home
-                  <span className="sr-only"></span>
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/VideoSingleTextQuestion">
+                  Video - Text
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/VideoSelectResponse">
+                  Video - Select
                 </NavLink>
               </li>
               <li className="nav-item">

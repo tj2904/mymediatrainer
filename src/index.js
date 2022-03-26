@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
   Navigation,
@@ -9,17 +9,31 @@ import {
   Home,
   About,
   Contact,
+  VideoSingleTextQuestion,
+  VideoSelectResponse,
 } from "./components";
 
 ReactDOM.render(
   <Router>
-    <Navigation />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-    <Footer />
+    <div className="page-container">
+      <div className="content-wrap">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/VideoSingleTextQuestion"
+            element={<VideoSingleTextQuestion />}
+          />
+          <Route
+            path="/VideoSelectResponse"
+            element={<VideoSelectResponse />}
+          />
+        </Routes>
+        <Footer />
+      </div>
+    </div>
   </Router>,
 
   document.getElementById("root")
