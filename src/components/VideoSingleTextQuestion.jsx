@@ -5,12 +5,12 @@ function VideoSingleTextQuestion() {
   return (
     <div className="container pt-4">
       <div className="VideoSingleTextQuestion m-4">
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             {" "}
             <ReactPlayer url="http://techslides.com/demos/sample-videos/small.mp4" controls="true" />
           </div>
-          <div class="col">
+          <div className="col">
             <h3>Scenario Title</h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
@@ -22,8 +22,8 @@ function VideoSingleTextQuestion() {
         </div>
 
       
-        <form class="mt-4 pt-2">
-          <label for="formGroupExampleInput" class="form-label">
+        <form className="mt-4 pt-2">
+          <label for="formGroupExampleInput" className="form-label">
             Enter your written answer below:
           </label>
           <textarea
@@ -33,7 +33,7 @@ function VideoSingleTextQuestion() {
             placeholder="That's a great question thanks. I think that..."
           />
           <div className="response-end text-end">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit Answer
           </button>
           </div>
