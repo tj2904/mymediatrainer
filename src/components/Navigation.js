@@ -4,10 +4,10 @@ import { NavLink } from "react-router-dom";
 function Navigation() {
   return (
     <div className="navigation">
-      <nav className="navbar navbar-expand navbar-light bg-light">
+      <nav className="navbar navbar-expand-md navbar-light bg-light">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-          <i class="bi bi-camera-reels-fill"></i>
+          <i class="bi bi-camera-reels-fill d-inline-block align-text-middle"></i>
           &nbsp;&nbsp;My Media Trainer
           </NavLink>
           <div>

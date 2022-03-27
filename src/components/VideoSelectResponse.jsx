@@ -1,19 +1,25 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
 
+
 function VideoSelectResponse() {
   return (
     <div className="container pt-4">
       <div className="VideoSingleTextQuestion m-4">
         <div className="row">
-          <div className="col">
+          <div className="col-8 col-md-8 col-sm-12">
             {" "}
-            <ReactPlayer
-              url="http://techslides.com/demos/sample-videos/small.mp4"
-              controls="true"
-            />
+            <div className="player-wrapper">
+              <ReactPlayer
+                className="react=player"
+                url="http://techslides.com/demos/sample-videos/small.mp4"
+                controls="true"
+                width="100%"
+                height="100%"
+              />
+            </div>
           </div>
-          <div className="col">
+          <div className="col-4 col-md-4 col-sm-12">
             <h3>Scenario Title</h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
@@ -85,29 +91,66 @@ function VideoSelectResponse() {
             </label>
           </div>
           <div className="response-end text-end">
-          <button type="submit" class="btn btn-primary">
-            Submit Answer
-          </button>
+            <button type="submit" class="btn btn-primary">
+              Submit Answer
+            </button>
           </div>
         </div>
       </div>
       <nav aria-label="Page navigation example">
-  <ul className="pagination justify-content-center">
-    <li className="page-item disabled">
-      <a className="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-    </li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">1</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">2</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">3</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">4</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">5</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">6</a></li>
-    <li className="page-item"><a className="page-link" href="/VideoSelectResponse">7</a></li>  
-    <li className="page-item">
-      <a className="page-link" href="/VideoSelectResponse">Next</a>
-    </li>
-  </ul>
-</nav>
+        <ul className="pagination justify-content-center">
+          <li className="page-item disabled">
+            <a
+              className="page-link"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+            >
+              Previous
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              1
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              2
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              3
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              4
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              5
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              6
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              7
+            </a>
+          </li>
+          <li className="page-item">
+            <a className="page-link" href="/VideoSelectResponse">
+              Next
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

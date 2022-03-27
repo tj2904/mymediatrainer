@@ -6,11 +6,19 @@ function VideoSingleTextQuestion() {
     <div className="container pt-4">
       <div className="VideoSingleTextQuestion m-4">
         <div className="row">
-          <div className="col">
+          <div className="col-8 col-md-8 col-sm-12">
             {" "}
-            <ReactPlayer url="http://techslides.com/demos/sample-videos/small.mp4" controls="true" />
+            <div className="player-wrapper">
+              <ReactPlayer
+                className="react=player"
+                url="http://techslides.com/demos/sample-videos/small.mp4"
+                controls="true"
+                width="100%"
+                height="100%"
+              />
+            </div>
           </div>
-          <div className="col">
+          <div className="col-4 col-md-4 col-sm-12">
             <h3>Scenario Title</h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
