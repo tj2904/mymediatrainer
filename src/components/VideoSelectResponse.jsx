@@ -19,7 +19,7 @@ function VideoSelectResponse() {
             </div>
           </div>
           <div className="col-lg-5">
-            <h1>Scenario Title fd</h1>
+            <h1>Scenario Title</h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
             sociosqu ad litora torquent per conubia nostra, per inceptos
@@ -89,14 +89,14 @@ function VideoSelectResponse() {
               Option 5
             </label>
           </div>
-          <div className="response-end text-end">
+          <div className="response-end text-end pb-2">
             <button type="submit" class="btn btn-primary">
               Submit Answer
             </button>
           </div>
         </div>
       </div>
-      <nav aria-label="Page navigation example">
+      <nav aria-label="Page navigation">
         <ul className="pagination justify-content-center">
           <li className="page-item disabled">
             <a
