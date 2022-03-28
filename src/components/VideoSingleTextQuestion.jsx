@@ -3,11 +3,10 @@ import ReactPlayer from "react-player/lazy";
 
 function VideoSingleTextQuestion() {
   return (
-    <div className="container pt-4">
-      <div className="VideoSingleTextQuestion m-4">
-        <div className="row">
-          <div className="col-8 col-md-8 col-sm-12">
-            {" "}
+    <div className="videoSingleText">
+    <div className="container">
+      <div className="row align-items-top my-5">
+        <div className="col-lg-7">
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
@@ -18,8 +17,8 @@ function VideoSingleTextQuestion() {
               />
             </div>
           </div>
-          <div className="col-4 col-md-4 col-sm-12">
-            <h3>Scenario Title</h3>
+          <div className="col-lg-5">
+            <h1>Scenario Title</h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
             sociosqu ad litora torquent per conubia nostra, per inceptos
