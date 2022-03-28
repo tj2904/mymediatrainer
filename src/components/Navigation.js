@@ -7,7 +7,7 @@ function Navigation() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-          <i class="bi bi-camera-reels-fill d-inline-block align-text-middle"></i>
+          <i className="bi bi-camera-reels-fill d-inline-block align-text-middle"></i>
           &nbsp;&nbsp;My Media Trainer
           </NavLink>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
