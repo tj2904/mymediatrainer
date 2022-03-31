@@ -2,13 +2,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer">
-      <footer class="p-3 bg-light fixed-bottom">
-        <div class="container">
-          <p class="m-0 text-center ">
-            Copyright &copy; 2022 MyMediaTrainer
-          </p>
-        </div>
+    <div className="footer mt-2">
+      <footer className="p-3 bg-light bottom">
+        <p className="m-0 text-center text-muted">
+          Copyright &copy; 2022 MyMediaTrainer
+        </p>
       </footer>
     </div>
   );
