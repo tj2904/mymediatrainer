@@ -31,8 +31,8 @@ function Navigation() {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
-                  About
+                <NavLink className="nav-link" to="/Scenario1">
+                Cyber Interview
                 </NavLink>
               </li>
               <li className="nav-item">

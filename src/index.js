@@ -7,10 +7,11 @@ import {
   Navigation,
   Footer,
   Home,
-  About,
+  Scenario1,
   Contact,
   VideoSingleTextQuestion,
   VideoSelectResponse,
+  CyberInterview
 } from "./components";
 
 ReactDOM.render(
@@ -20,7 +21,7 @@ ReactDOM.render(
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/Scenario1" element={<Scenario1 />} />
           <Route path="/contact" element={<Contact />} />
           <Route
             path="/VideoSingleTextQuestion"
@@ -30,6 +31,7 @@ ReactDOM.render(
             path="/VideoSelectResponse"
             element={<VideoSelectResponse />}
           />
+          <Route path="/CyberInterview" element={<CyberInterview />} />
         </Routes>
         <Footer />
       </div>
