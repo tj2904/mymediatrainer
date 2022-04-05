@@ -7,7 +7,7 @@ function Scenario1() {
     <div className="container">
       <div className="row align-items-top my-5">
         <div className="col-lg-7">
-          <img src={PressOfficerBriefing} className="img-fluid"alt="Press Officer Briefing photo" />
+          <img src={PressOfficerBriefing} className="img-fluid"alt="Press Officer Briefing" />
         </div>
         <div className="col-lg-5">
           <h1>Cyber Incident Scenario </h1>
