@@ -11,6 +11,7 @@ import {
   Contact,
   VideoSingleTextQuestion,
   VideoSelectResponse,
+  VideoUpload,
 } from "./components";
 
 ReactDOM.render(
@@ -30,6 +31,7 @@ ReactDOM.render(
             path="/VideoSelectResponse"
             element={<VideoSelectResponse />}
           />
+          <Route path="/VideoUpload" element={<VideoUpload />} />
         </Routes>
         <Footer />
       </div>
