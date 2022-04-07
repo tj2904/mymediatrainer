@@ -47,7 +47,7 @@ export default function VideoUpload() {
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
-                url="http://techslides.com/demos/sample-videos/small.mp4"
+                url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AABogyyUQiMibxzYpBHavUsma/Interview%20-%20clip%205.mov"
                 controls="true"
                 width="100%"
                 height="100%"
