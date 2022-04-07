@@ -118,7 +118,7 @@ function CyberInterview() {
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
-                url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AABfsFNxDPnuc4sGKwH-lk-sa/Interview%20-%20clip%201.mov"
+                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/AllQuestions.mp4?alt=media&token=69598589-1b30-4642-9e81-1315fbab183d"
                 controls="true"
                 width="100%"
                 height="100%"
