@@ -32,7 +32,7 @@ ReactDOM.render(
             path="/VideoSelectResponse"
             element={<VideoSelectResponse />}
           />
-          <Route path="/VideoUpload" element={<VideoUpload />} />
+          <Route path="/upload" element={<VideoUpload />} />
         </Routes>
         <Footer />
       </div>
