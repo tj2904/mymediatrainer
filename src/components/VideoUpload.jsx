@@ -1,10 +1,20 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
+
+import {  uploadBytes, ref} from "firebase/storage"
+import {storage } from "../firebase";
+
 import {
   RecordWebcam,
   useRecordWebcam,
   CAMERA_STATUS,
 } from "react-record-webcam";
+
+// Create a root reference
+
+
+const storageRef = ref(storage,  "test-video-upload");
+
 const OPTIONS = {
   filename: "test-filename",
   fileType: "mp4",
@@ -17,6 +27,12 @@ export default function VideoUpload() {
   const getRecordingFileHooks = async () => {
     const blob = await recordWebcam.getRecording();
     console.log({ blob });
+    
+    //upload to firebase
+    // 'file' comes from the Blob or File API
+    uploadBytes(storageRef, blob).then((snapshot) => {
+      console.log("Uploaded a blob!");
+    });
   };
 
   const getRecordingFileRenderProp = async (blob) => {
@@ -55,7 +71,7 @@ export default function VideoUpload() {
             <p>
               Open up and grant access to your camera. When ready start
               recording and record your response. The video should be less than
-              30 seconds long.{" "}
+              30 seconds long.
             </p>
             <p>When completed click upload for Evaluation.</p>
             {/* <p>Camera status: {recordWebcam.status}</p> */}
@@ -131,13 +147,13 @@ export default function VideoUpload() {
             />
             <video
               ref={recordWebcam.previewRef}
-              // style={{
-              //   display: `${
-              //     recordWebcam.status === CAMERA_STATUS.PREVIEW
-              //       ? "block"
-              //       : "none"
-              //   }`,
-              // }}
+              style={{
+                display: `${
+                  recordWebcam.status === CAMERA_STATUS.PREVIEW
+                    ? "block"
+                    : "none"
+                }`,
+              }}
               controls
             />
           </div>
