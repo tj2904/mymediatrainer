@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
+import "./video.css";
 import { uploadBytes, ref } from "firebase/storage";
 import { storage } from "../firebase";
 import {
@@ -139,6 +140,7 @@ export default function VideoUpload() {
                       ? "block"
                       : "none"
                   }`,
+                  
                 }}
                 autoPlay
                 muted
