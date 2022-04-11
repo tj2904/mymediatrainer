@@ -1,13 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player/lazy";
 import "./video.css";
 import { uploadBytes, ref } from "firebase/storage";
 import { storage } from "../firebase";
-import {
-  RecordWebcam,
-  useRecordWebcam,
-  CAMERA_STATUS,
-} from "react-record-webcam";
+import { useRecordWebcam, CAMERA_STATUS } from "react-record-webcam";
 
 // Create a root reference
 const storageRef = ref(storage, "test-video-upload");
@@ -31,10 +27,6 @@ export default function VideoUpload() {
     uploadBytes(storageRef, blob).then((snapshot) => {
       console.log("Uploaded a blob!");
     });
-  };
-
-  const getRecordingFileRenderProp = async (blob) => {
-    console.log({ blob });
   };
 
   return (
