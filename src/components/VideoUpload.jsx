@@ -140,7 +140,6 @@ export default function VideoUpload() {
                       ? "block"
                       : "none"
                   }`,
-                  
                 }}
                 autoPlay
                 muted
