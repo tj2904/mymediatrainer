@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
-
-import {  uploadBytes, ref} from "firebase/storage"
-import {storage } from "../firebase";
-
+import { uploadBytes, ref } from "firebase/storage";
+import { storage } from "../firebase";
 import {
   RecordWebcam,
   useRecordWebcam,
@@ -11,9 +9,7 @@ import {
 } from "react-record-webcam";
 
 // Create a root reference
-
-
-const storageRef = ref(storage,  "test-video-upload");
+const storageRef = ref(storage, "test-video-upload");
 
 const OPTIONS = {
   filename: "test-filename",
@@ -23,11 +19,12 @@ const OPTIONS = {
 };
 
 export default function VideoUpload() {
+  // TODO : add progress info on upload
+
   const recordWebcam = useRecordWebcam(OPTIONS);
   const getRecordingFileHooks = async () => {
     const blob = await recordWebcam.getRecording();
     console.log({ blob });
-    
     //upload to firebase
     // 'file' comes from the Blob or File API
     uploadBytes(storageRef, blob).then((snapshot) => {
@@ -77,85 +74,87 @@ export default function VideoUpload() {
             {/* <p>Camera status: {recordWebcam.status}</p> */}
           </div>
           <div className="col-lg-7">
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={
-                recordWebcam.status === CAMERA_STATUS.OPEN ||
-                recordWebcam.status === CAMERA_STATUS.RECORDING ||
-                recordWebcam.status === CAMERA_STATUS.PREVIEW
-              }
-              onClick={recordWebcam.open}
-            >
-              Open camera
-            </button>
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={
-                recordWebcam.status === CAMERA_STATUS.CLOSED ||
-                recordWebcam.status === CAMERA_STATUS.PREVIEW
-              }
-              onClick={recordWebcam.close}
-            >
-              Close camera
-            </button>
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={
-                recordWebcam.status === CAMERA_STATUS.CLOSED ||
-                recordWebcam.status === CAMERA_STATUS.RECORDING ||
-                recordWebcam.status === CAMERA_STATUS.PREVIEW
-              }
-              onClick={recordWebcam.start}
-            >
-              Start
-            </button>
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={recordWebcam.status !== CAMERA_STATUS.RECORDING}
-              onClick={recordWebcam.stop}
-            >
-              Stop
-            </button>
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={recordWebcam.status !== CAMERA_STATUS.PREVIEW}
-              onClick={recordWebcam.retake}
-            >
-              Retake
-            </button>
-
-            <button
-              className="btn btn-primary p-1 m-1"
-              disabled={recordWebcam.status !== CAMERA_STATUS.PREVIEW}
-              onClick={getRecordingFileHooks}
-            >
-              Upload for Evaluation
-            </button>
-
-            <video
-              ref={recordWebcam.webcamRef}
-              style={{
-                display: `${
+            <div className="player-wrapper">
+              {/* // TODO: These buttons could be conditionally rendered */}
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={
                   recordWebcam.status === CAMERA_STATUS.OPEN ||
-                  recordWebcam.status === CAMERA_STATUS.RECORDING
-                    ? "block"
-                    : "none"
-                }`,
-              }}
-              autoPlay
-              muted
-            />
-            <video
-              ref={recordWebcam.previewRef}
-              style={{
-                display: `${
+                  recordWebcam.status === CAMERA_STATUS.RECORDING ||
                   recordWebcam.status === CAMERA_STATUS.PREVIEW
-                    ? "block"
-                    : "none"
-                }`,
-              }}
-              controls
-            />
+                }
+                onClick={recordWebcam.open}
+              >
+                Open camera
+              </button>
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={
+                  recordWebcam.status === CAMERA_STATUS.CLOSED ||
+                  recordWebcam.status === CAMERA_STATUS.PREVIEW
+                }
+                onClick={recordWebcam.close}
+              >
+                Close camera
+              </button>
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={
+                  recordWebcam.status === CAMERA_STATUS.CLOSED ||
+                  recordWebcam.status === CAMERA_STATUS.RECORDING ||
+                  recordWebcam.status === CAMERA_STATUS.PREVIEW
+                }
+                onClick={recordWebcam.start}
+              >
+                Start
+              </button>
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={recordWebcam.status !== CAMERA_STATUS.RECORDING}
+                onClick={recordWebcam.stop}
+              >
+                Stop
+              </button>
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={recordWebcam.status !== CAMERA_STATUS.PREVIEW}
+                onClick={recordWebcam.retake}
+              >
+                Retake
+              </button>
+              <button
+                className="btn btn-primary p-1 m-1"
+                disabled={recordWebcam.status !== CAMERA_STATUS.PREVIEW}
+                onClick={getRecordingFileHooks}
+              >
+                Upload for Evaluation
+              </button>
+              {/* {uploadProgress} % */}
+              <video
+                ref={recordWebcam.webcamRef}
+                style={{
+                  display: `${
+                    recordWebcam.status === CAMERA_STATUS.OPEN ||
+                    recordWebcam.status === CAMERA_STATUS.RECORDING
+                      ? "block"
+                      : "none"
+                  }`,
+                }}
+                autoPlay
+                muted
+              />
+              <video
+                ref={recordWebcam.previewRef}
+                style={{
+                  display: `${
+                    recordWebcam.status === CAMERA_STATUS.PREVIEW
+                      ? "block"
+                      : "none"
+                  }`,
+                }}
+                controls
+              />
+            </div>
           </div>
         </div>
       </div>
