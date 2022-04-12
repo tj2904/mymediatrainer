@@ -5,15 +5,16 @@ import { uploadBytes, ref } from "firebase/storage";
 import { storage } from "../firebase";
 import { useRecordWebcam, CAMERA_STATUS } from "react-record-webcam";
 
-// Create a root reference
-const storageRef = ref(storage, "test-video-upload");
-
+// Append date (as a number) to the file name for uniquness
 const OPTIONS = {
-  filename: "test-filename",
+  filename: "cyberScenarioResponse-" + Date.now(),
   fileType: "mp4",
   width: 640,
   height: 360,
 };
+
+// Create a root reference
+const storageRef = ref(storage, OPTIONS.filename);
 
 export default function VideoUpload() {
   // TODO : add progress info on upload
