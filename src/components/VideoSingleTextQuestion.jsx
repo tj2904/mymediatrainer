@@ -19,12 +19,7 @@ function VideoSingleTextQuestion() {
           </div>
           <div className="col-lg-5">
             <h1>Scenario Title</h1>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            bibendum est in felis bibendum imperdiet. Class aptent taciti
-            sociosqu ad litora torquent per conubia nostra, per inceptos
-            himenaeos. Suspendisse eu libero eleifend, efficitur magna tempus,
-            facilisis erat. Donec consectetur, odio non dapibus vestibulum, nibh
-            arcu vulputate magna, semper eleifend elit nunc vitae lacus.
+            <p>How would you answer this question? </p> <p>Jot down your response in a short sentence or two. </p><p><strong> Maximum allowed time on this task: 60 seconds</strong> </p>
           </div>
         </div>
 

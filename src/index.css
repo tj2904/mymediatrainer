@@ -29,6 +29,10 @@ body {
   border-top: 1px solid lightgray;
 }
 
+.react-quiz-container {
+  width: auto !important
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

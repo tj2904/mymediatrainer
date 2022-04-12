@@ -25,14 +25,10 @@ function Navigation() {
                   Video - Text
                 </NavLink>
               </li>
+
               <li className="nav-item">
-                <NavLink className="nav-link" to="/VideoSelectResponse">
-                  Video - Select
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/about">
-                  About
+                <NavLink className="nav-link" to="/Scenario1">
+                Cyber Scenario
                 </NavLink>
               </li>
               <li className="nav-item">
