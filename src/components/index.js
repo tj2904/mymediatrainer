@@ -5,5 +5,6 @@ export { default as Scenario1 } from "./Scenario1";
 export { default as Contact } from "./Contact";
 export { default as VideoSingleTextQuestion } from "./VideoSingleTextQuestion";
 export { default as VideoSelectResponse} from "./VideoSelectResponse";
-export { default as VideoUpload} from "./VideoUpload"
+export { default as VideoUpload} from "./VideoUpload";
 export { default as CyberInterview} from "./CyberInterview"
+
