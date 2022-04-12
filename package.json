@@ -13,6 +13,7 @@
     "react-media-recorder": "^1.6.3",
     "react-player": "^2.10.0",
     "react-record-webcam": "^0.0.14",
+    "react-quiz-component": "^0.3.9",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-video-recorder": "^3.19.2",
