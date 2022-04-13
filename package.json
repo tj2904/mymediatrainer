@@ -12,13 +12,18 @@
     "react-dom": "^17.0.2",
     "react-media-recorder": "^1.6.3",
     "react-player": "^2.10.0",
-    "react-record-webcam": "^0.0.14",
     "react-quiz-component": "^0.3.9",
+    "react-record-webcam": "^0.0.14",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
     "react-video-recorder": "^3.19.2",
+    "shebang-command": "^2.0.0",
+    "sisteransi": "^1.0.5",
+    "strip-final-newline": "^3.0.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "unpipe": "^1.0.0",
+    "web-vitals": "^2.1.4",
+    "which": "^2.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
