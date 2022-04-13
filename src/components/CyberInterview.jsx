@@ -1,6 +1,7 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
 import Quiz from "react-quiz-component";
+import { NavLink } from "react-router-dom";
 
 const questions = {
   quizTitle: "",
@@ -134,6 +135,16 @@ function CyberInterview() {
 
         {/* Quiz component goes here */}
         <Quiz quiz={questions} />
+        <div className="response-end text-end pb-4 d-grid gap-2 d-md-flex justify-content-md-end">
+        
+        {/* //TODO this needs to be only shown after the quiz is complete */}
+        <NavLink
+          className="nav-link btn btn-primary text-light"
+          to="/upload"
+        >
+          Final Task
+        </NavLink>
+      </div>
       </div>
     </div>
   );
