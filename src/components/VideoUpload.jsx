@@ -27,6 +27,8 @@ export default function VideoUpload() {
     // 'file' comes from the Blob or File API
     uploadBytes(storageRef, blob).then((snapshot) => {
       console.log("Uploaded a blob!");
+      //Tell the user it has been recieved
+      alert("Your video has been sucessfully submitted!");
     });
   };
 
