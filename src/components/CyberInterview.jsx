@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import Quiz from "react-quiz-component";
 import { NavLink } from "react-router-dom";
@@ -98,6 +98,7 @@ const questions = {
   },
 };
 
+// BOILER PLATE IN CASE WE WANT A DIFFERENT RESULT PAGE
 // const renderCustomResultPage = (obj) => {
 //   console.log(obj);
 //   return (
@@ -111,6 +112,14 @@ const questions = {
 // }
 
 function CyberInterview() {
+  // const to support conditional rendering
+  const [showFinalPage, setShowFinalPage] = useState(false);
+  // set showFinalPage to true once the result object is returned
+  const setQuizResult = (obj) => {
+    console.log(obj);
+    setShowFinalPage(true);
+  };
+
   return (
     <div className="videoSingleText">
       <div className="container">
@@ -134,17 +143,20 @@ function CyberInterview() {
         </div>
 
         {/* Quiz component goes here */}
-        <Quiz quiz={questions} />
+        <Quiz quiz={questions} onComplete={setQuizResult} />
         <div className="response-end text-end pb-4 d-grid gap-2 d-md-flex justify-content-md-end">
-        
-        {/* //TODO this needs to be only shown after the quiz is complete */}
-        <NavLink
-          className="nav-link btn btn-primary text-light"
-          to="/upload"
-        >
-          Final Task
-        </NavLink>
-      </div>
+          {/* //Shows link when completed and nothing while the quiz is in progress hence the empty "" */}
+          {showFinalPage ? (
+            <NavLink
+              className="nav-link btn btn-primary text-light"
+              to="/upload"
+            >
+              Final Task
+            </NavLink>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );
