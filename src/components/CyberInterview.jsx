@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import Quiz from "react-quiz-component";
+import { NavLink } from "react-router-dom";
 
 const questions = {
   quizTitle: "",
@@ -97,6 +98,7 @@ const questions = {
   },
 };
 
+// BOILER PLATE IN CASE WE WANT A DIFFERENT RESULT PAGE
 // const renderCustomResultPage = (obj) => {
 //   console.log(obj);
 //   return (
@@ -110,7 +112,16 @@ const questions = {
 // }
 
 function CyberInterview() {
+  // const to support conditional rendering
+  const [showFinalPage, setShowFinalPage] = useState(false);
+  // set showFinalPage to true once the result object is returned
+  const setQuizResult = (obj) => {
+    console.log(obj);
+    setShowFinalPage(true);
+  };
+
   return (
+    // Display the intro video in a react-player component
     <div className="videoSingleText">
       <div className="container">
         <div className="row align-items-top my-5">
@@ -126,6 +137,7 @@ function CyberInterview() {
             </div>
           </div>
           <div className="col-lg-5">
+            {/* new div for the text next to the video, the class means it will wrap on small screens below the video */}
             <h1>Cyber Incident Response</h1>
             Play the video to hear the question from the journalist. Then start
             the interview and select the best of the responses below.
@@ -133,7 +145,23 @@ function CyberInterview() {
         </div>
 
         {/* Quiz component goes here */}
-        <Quiz quiz={questions} />
+        <Quiz quiz={questions} onComplete={setQuizResult} />
+        <div className="response-end text-end pb-4 d-grid gap-2 d-md-flex justify-content-md-end">
+          {/*
+          Shows link when completed and nothing while the quiz is in progress hence the empty "" *
+          https://reactjs.org/docs/conditional-rendering.html
+  */}
+          {showFinalPage ? (
+            <NavLink
+              className="nav-link btn btn-primary text-light"
+              to="/upload"
+            >
+              Final Task
+            </NavLink>
+          ) : (
+            ""
+          )}
+        </div>
       </div>
     </div>
   );
