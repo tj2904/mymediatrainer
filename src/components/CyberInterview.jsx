@@ -121,6 +121,7 @@ function CyberInterview() {
   };
 
   return (
+    // Display the intro video in a react-player component
     <div className="videoSingleText">
       <div className="container">
         <div className="row align-items-top my-5">
@@ -136,6 +137,7 @@ function CyberInterview() {
             </div>
           </div>
           <div className="col-lg-5">
+            {/* new div for the text next to the video, the class means it will wrap on small screens below the video */}
             <h1>Cyber Incident Response</h1>
             Play the video to hear the question from the journalist. Then start
             the interview and select the best of the responses below.
@@ -145,7 +147,10 @@ function CyberInterview() {
         {/* Quiz component goes here */}
         <Quiz quiz={questions} onComplete={setQuizResult} />
         <div className="response-end text-end pb-4 d-grid gap-2 d-md-flex justify-content-md-end">
-          {/* //Shows link when completed and nothing while the quiz is in progress hence the empty "" */}
+          {/*
+          Shows link when completed and nothing while the quiz is in progress hence the empty "" *
+          https://reactjs.org/docs/conditional-rendering.html
+  */}
           {showFinalPage ? (
             <NavLink
               className="nav-link btn btn-primary text-light"

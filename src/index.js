@@ -4,6 +4,8 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import {
+  // add additional components to this block as needed
+  // add route inside the Routes block even if it isn't link in the NavBar
   Navigation,
   Footer,
   Home,

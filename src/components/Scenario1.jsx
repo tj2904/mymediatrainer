@@ -2,6 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import PressOfficerBriefing from "../PressOfficerBriefing.png";
 
+// An intro page that has a link to the quiz page as a new component
+// This could be a template for other scenarios with different quizes link to
+
 function Scenario1() {
   return (
     <div className="container">

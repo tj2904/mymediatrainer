@@ -2,6 +2,8 @@ import React from "react";
 import Quiz from "react-quiz-component";
 import ReactPlayer from "react-player/lazy";
 
+// This is the JSON to control the quiz component
+// https://github.com/wingkwong/react-quiz-component
 
 const questions =  {
   "quizTitle": "React Quiz Component Demo",
@@ -109,6 +111,7 @@ function Quizpage() {
   return (
 <div className="questions">
 <div className="col-lg-7">
+  {/* Player with the video that has the questions all in one to match the quiz */}
 <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"

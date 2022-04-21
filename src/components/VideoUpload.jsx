@@ -5,6 +5,8 @@ import { uploadBytes, ref } from "firebase/storage";
 import { storage } from "../firebase";
 import { useRecordWebcam, CAMERA_STATUS } from "react-record-webcam";
 
+// adapted from https://codesandbox.io/s/xm6fp
+
 // Append date (as a number) to the file name for uniquness
 const OPTIONS = {
   filename: "cyberScenarioResponse-" + Date.now(),

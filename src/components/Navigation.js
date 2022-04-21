@@ -1,6 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+// This is the top nav bar.
+// Use a NavLink component with the to="" parameter to add a link to a new page
+// All other HTML is bootstrap / standard stuff
+
+// NOTE - for links to work the path needs to be added here, in index.js in the components folder and 
+// the route needs to be in index.js in the root folder
+
+
 function Navigation() {
   return (
     <div className="navigation">
