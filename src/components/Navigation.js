@@ -5,9 +5,8 @@ import { NavLink } from "react-router-dom";
 // Use a NavLink component with the to="" parameter to add a link to a new page
 // All other HTML is bootstrap / standard stuff
 
-// NOTE - for links to work the path needs to be added here, in index.js in the components folder and 
+// NOTE - for links to work the path needs to be added here, in index.js in the components folder and
 // the route needs to be in index.js in the root folder
-
 
 function Navigation() {
   return (
@@ -47,11 +46,7 @@ function Navigation() {
                   Cyber Scenario
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/upload">
-                  Video Upload
-                </NavLink>
-              </li>
+
               <li className="nav-item">
                 <NavLink className="nav-link" to="/contact">
                   Contact
