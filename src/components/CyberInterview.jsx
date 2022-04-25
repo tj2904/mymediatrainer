@@ -129,7 +129,7 @@ function CyberInterview() {
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
-                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/AllQuestions.mp4?alt=media&token=69598589-1b30-4642-9e81-1315fbab183d"
+                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/All3Questions.mp4?alt=media&token=7ac8cee0-3744-406e-8167-627e95da5d30"
                 controls="true"
                 width="100%"
                 height="100%"
@@ -154,9 +154,9 @@ function CyberInterview() {
           {showFinalPage ? (
             <NavLink
               className="nav-link btn btn-primary text-light"
-              to="/upload"
+              to="/VideoSingleTextQuestion"
             >
-              Final Task
+              Next Task
             </NavLink>
           ) : (
             ""
