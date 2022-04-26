@@ -49,7 +49,7 @@ function VideoSingleTextQuestion() {
             placeholder="That's a great question thanks. I think that..."
           />
           <div className="response-end text-end pb-2">
-            <button type="" className="btn btn-primary">
+            <button type="submit" className="btn btn-primary">
               Submit Answer
             </button>
           </div>
