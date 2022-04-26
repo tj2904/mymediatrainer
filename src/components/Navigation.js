@@ -35,11 +35,6 @@ function Navigation() {
                   Home
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/VideoSingleTextQuestion">
-                  Video - Text
-                </NavLink>
-              </li>
 
               <li className="nav-item">
                 <NavLink className="nav-link" to="/Scenario1">
