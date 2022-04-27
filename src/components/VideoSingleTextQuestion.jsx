@@ -1,8 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import { NavLink } from "react-router-dom";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
+
+const data = {
+  scenario: "CyberWritenResponse",
+  answer: "hard-coded",
+  date: Date.now(),
+};
 
 function VideoSingleTextQuestion() {
+  // https://www.geeksforgeeks.org/how-to-use-firestore-database-in-reactjs/
+  const [writtenResponse, setWrittenResponse] = useState(
+    "No response provided"
+  );
+
+  const submit = (e) => {
+    e.preventDefault();
+    addDoc(collection(db, "clientResponses"), {
+      scenario: "CyberScenario-WritenResponse",
+      answer: writtenResponse,
+      // https://stackoverflow.com/questions/32192922/how-do-i-get-a-date-in-yyyy-mm-dd-format
+      date: new Date().toLocaleString(),
+    })
+      .then((docRef) => {
+        alert(
+          "Your response has been successfully submitted for review by a trainer."
+        );
+      })
+      .catch((error) => {
+        console.error("Error adding document: ", error);
+      });
+  };
+
   return (
     <div className="videoSingleText">
       <div className="container">
@@ -43,13 +74,16 @@ function VideoSingleTextQuestion() {
             Enter your written answer below:
           </label>
           <textarea
+            onChange={(e) => {
+              setWrittenResponse(e.target.value);
+            }}
             rows="3"
             className="form-control mb-2"
             id="questionResponse"
             placeholder="That's a great question thanks. I think that..."
           />
           <div className="response-end text-end pb-2">
-            <button type="submit" className="btn btn-primary">
+            <button onClick={submit} type="submit" className="btn btn-primary">
               Submit Answer
             </button>
           </div>
