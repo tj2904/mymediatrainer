@@ -41,12 +41,6 @@ function Navigation() {
                   Cyber Scenario
                 </NavLink>
               </li>
-
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/contact">
-                  Contact
-                </NavLink>
-              </li>
             </ul>
           </div>
         </div>
