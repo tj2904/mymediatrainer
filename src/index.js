@@ -10,7 +10,6 @@ import {
   Footer,
   Home,
   Scenario1,
-  Contact,
   VideoSingleTextQuestion,
   VideoSelectResponse,
   VideoUpload,
@@ -25,7 +24,6 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Scenario1" element={<Scenario1 />} />
-          <Route path="/contact" element={<Contact />} />
           <Route
             path="/VideoSingleTextQuestion"
             element={<VideoSingleTextQuestion />}
