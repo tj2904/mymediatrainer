@@ -8,7 +8,6 @@ import {
   // add route inside the Routes block even if it isn't link in the NavBar
   Navigation,
   Footer,
-  Home,
   Scenario1,
   VideoSingleTextQuestion,
   VideoSelectResponse,
@@ -22,7 +21,7 @@ ReactDOM.render(
       <div className="content-wrap">
         <Navigation />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Scenario1 />} />
           <Route path="/Scenario1" element={<Scenario1 />} />
           <Route
             path="/VideoSingleTextQuestion"
