@@ -122,7 +122,7 @@ function Quizpage() {
               />
             </div>
             </div>
-<Quiz quiz={questions}/>
+<Quiz quiz={questions} />
 </div>
     );
   }

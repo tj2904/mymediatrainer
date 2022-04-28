@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
 import Quiz from "react-quiz-component";
 import { NavLink } from "react-router-dom";
+import "./CyberInterview.css";
 
 const questions = {
   quizTitle: "",

@@ -1,0 +1,10 @@
+.react-quiz-container .questionWrapper .btn.correct {
+    background: white;
+    color: black;
+
+}
+
+.react-quiz-container .questionWrapper .incorrect {
+    background: white;
+    color: black;
+}
