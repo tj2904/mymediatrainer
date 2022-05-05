@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player/lazy";
 import "./video.css";
 import { uploadBytes, ref } from "firebase/storage";
@@ -21,6 +22,7 @@ const storageRef = ref(storage, OPTIONS.filename);
 export default function VideoUpload() {
   // TODO : add progress info on upload
 
+  const navigate = useNavigate();
   const recordWebcam = useRecordWebcam(OPTIONS);
   const getRecordingFileHooks = async () => {
     const blob = await recordWebcam.getRecording();
@@ -31,7 +33,9 @@ export default function VideoUpload() {
       console.log("Uploaded a blob!");
       //Tell the user it has been recieved
       alert("Your video has been sucessfully submitted!");
+      navigate('/exit') 
     });
+    
   };
 
   return (
