@@ -130,7 +130,7 @@ function CyberInterview() {
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
-                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/All3Questions.mp4?alt=media&token=7ac8cee0-3744-406e-8167-627e95da5d30"
+                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/AllQuestions-with%20Titles.mp4?alt=media&token=43fa511a-3b69-47f2-85ca-d19200e6e854"
                 controls="true"
                 width="100%"
                 height="100%"
