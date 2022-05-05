@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
-
-const data = {
-  scenario: "CyberWritenResponse",
-  answer: "hard-coded",
-  date: Date.now(),
-};
 
 function VideoSingleTextQuestion() {
   const navigate = useNavigate();
