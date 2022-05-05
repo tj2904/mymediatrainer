@@ -17,4 +17,13 @@
     display: none;
 }
 
-/* Add css here to ensure that the answer boxes respond to mouse hover over events  */
+/* Add css here to ensure that the answer boxes respond to mouse hover over events 
+
+.react-quiz-container .questionWrapper .btn  - is a good place to start... you will need to have a pseudo class for hover
+https://www.w3schools.com/cssref/sel_hover.asp
+https://css-tricks.com/css-link-hover-effects/ - more indepth but will explain how it works.
+
+REMEMBER to work on a branch and not the MAIN
+
+
+*/
