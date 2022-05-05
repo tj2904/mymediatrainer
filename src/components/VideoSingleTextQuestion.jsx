@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
-import { NavLink } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
@@ -11,6 +11,8 @@ const data = {
 };
 
 function VideoSingleTextQuestion() {
+  const navigate = useNavigate();
+
   // https://www.geeksforgeeks.org/how-to-use-firestore-database-in-reactjs/
   const [writtenResponse, setWrittenResponse] = useState(
     "No response provided"
@@ -28,6 +30,7 @@ function VideoSingleTextQuestion() {
         alert(
           "Your response has been successfully submitted for review by a trainer."
         );
+        navigate("/upload");
       })
       .catch((error) => {
         console.error("Error adding document: ", error);
@@ -84,16 +87,10 @@ function VideoSingleTextQuestion() {
           />
           <div className="response-end text-end pb-2">
             <button onClick={submit} type="submit" className="btn btn-primary">
-              Submit Answer
+              Submit Answer and Take Next Question
             </button>
           </div>
         </form>
-
-        <div className="response-end text-end pb-4 d-grid gap-2 d-md-flex justify-content-md-end">
-          <NavLink className="nav-link btn btn-primary text-light" to="/upload">
-            Final Question
-          </NavLink>
-        </div>
       </div>
     </div>
   );
