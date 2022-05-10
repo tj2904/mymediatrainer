@@ -40,6 +40,11 @@ function Navigation() {
                   TEMP - Modal
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/Modal2">
+                  TEMP - Modal 2
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
