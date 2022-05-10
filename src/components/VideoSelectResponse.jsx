@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactPlayer from "react-player/lazy";
-
+import { Modal, Button } from "react-bootstrap";
 
 function VideoSelectResponse() {
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
+
   return (
     <div className="videoSelect">
       <div className="container">
+        <Modal 
+          show={show} 
+          centered="true"
+          size="xl"
+          fullscreen="true"
+          animation="true"
+          onHide={handleClose}
+          keyboard="true"
+          >
+          <ReactPlayer
+            className="react=player"
+            url="http://techslides.com/demos/sample-videos/small.mp4"
+            controls="true"
+            width="100%"
+            height="100%"
+          />
+    
+
+        </Modal>
+
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
@@ -18,7 +41,7 @@ function VideoSelectResponse() {
               />
             </div>
           </div>
-          <div className="col-lg-5">
+          {/* <div className="col-lg-5">
             <h1>Scenario Title</h1>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             bibendum est in felis bibendum imperdiet. Class aptent taciti
@@ -26,7 +49,7 @@ function VideoSelectResponse() {
             himenaeos. Suspendisse eu libero eleifend, efficitur magna tempus,
             facilisis erat. Donec consectetur, odio non dapibus vestibulum, nibh
             arcu vulputate magna, semper eleifend elit nunc vitae lacus.
-          </div>
+          </div> */}
         </div>
 
         <div className="answerSelectionInfo pt-2">
