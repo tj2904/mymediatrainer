@@ -35,6 +35,11 @@ function Navigation() {
                   Cyber Scenario
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/VideoSelectResponse">
+                  TEMP - Modal
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

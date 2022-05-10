@@ -35,7 +35,7 @@ function VideoSingleTextQuestion() {
     <div className="videoSingleText">
       <div className="container">
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
@@ -45,24 +45,6 @@ function VideoSingleTextQuestion() {
                 height="100%"
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            <h1>Cyber Scenario</h1>
-            <p>How would you answer this question? </p>{" "}
-            <p>Jot down your response in a short sentence or two. </p>
-            <p>
-              <strong> Maximum allowed time on this task: 60 seconds</strong>{" "}
-            </p>
-            <p>
-              That’s all very well but doesn’t the fact that this could happen
-              suggest that you just aren’t taking your customers’ privacy
-              seriously?
-            </p>
-            <p>
-              How would you feel if your personal data was put up for sale on
-              the dark web by criminals? I’m assuming you’re not one of the
-              customers affected - are you?
-            </p>
           </div>
         </div>
 

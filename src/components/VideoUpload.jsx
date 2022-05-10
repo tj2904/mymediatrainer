@@ -33,16 +33,15 @@ export default function VideoUpload() {
       console.log("Uploaded a blob!");
       //Tell the user it has been recieved
       alert("Your video has been sucessfully submitted!");
-      navigate('/exit') 
+      navigate("/exit");
     });
-    
   };
 
   return (
     <div className="videoResponse">
       <div className="container">
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
@@ -52,16 +51,6 @@ export default function VideoUpload() {
                 height="100%"
               />
             </div>
-          </div>
-
-          <div className="col-lg-5">
-            <h1>Final Question</h1>
-            <p>
-              We are picking up from social media that a former employee has
-              just said this was “a situation waiting to happen” and that he
-              shared his concerns with managers but was ignored.
-            </p>
-            <p>Can you tell our viewers why that was?</p>
           </div>
         </div>
         <div className="row align-items-top my-5">

@@ -126,7 +126,7 @@ function CyberInterview() {
     <div className="videoSingleText">
       <div className="container">
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
+          <div className="col-lg-12">
             <div className="player-wrapper">
               <ReactPlayer
                 className="react=player"
@@ -136,12 +136,6 @@ function CyberInterview() {
                 height="100%"
               />
             </div>
-          </div>
-          <div className="col-lg-5">
-            {/* new div for the text next to the video, the class means it will wrap on small screens below the video */}
-            <h1>Cyber Incident Response</h1>
-            Play the video to hear the question from the journalist. Then start
-            the interview and select the best of the responses below.
           </div>
         </div>
 
