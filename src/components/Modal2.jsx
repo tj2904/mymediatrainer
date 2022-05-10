@@ -20,7 +20,7 @@ function Modal2() {
         >
           <ReactPlayer
             className="react=player"
-            url="http://techslides.com/demos/sample-videos/small.mp4"
+            url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AABj2CmqHodcoLM9zaJU21sEa/Interview%20-%20clip%202.mov"
             controls="true"
             width="100%"
             height="100%"
