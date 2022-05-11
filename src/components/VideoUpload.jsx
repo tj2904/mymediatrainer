@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 import ReactPlayer from "react-player/lazy";
 import "./video.css";
 import { uploadBytes, ref } from "firebase/storage";
 import { storage } from "../firebase";
 import { useRecordWebcam, CAMERA_STATUS } from "react-record-webcam";
+import { Modal } from "react-bootstrap";
 
 // adapted from https://codesandbox.io/s/xm6fp
 
@@ -33,35 +34,41 @@ export default function VideoUpload() {
       console.log("Uploaded a blob!");
       //Tell the user it has been recieved
       alert("Your video has been sucessfully submitted!");
-      navigate('/exit') 
+      navigate("/exit");
     });
-    
   };
 
+
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
   return (
     <div className="videoResponse">
       <div className="container">
-        <div className="row align-items-top my-5">
-          <div className="col-lg-7">
-            <div className="player-wrapper">
-              <ReactPlayer
+
+<Modal
+          show={show}
+          centered="true"
+          size="xl"
+          fullscreen="true"
+          animation="true"
+          onHide={handleClose}
+          keyboard="true"
+>
+<ReactPlayer
                 className="react=player"
                 url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AABogyyUQiMibxzYpBHavUsma/Interview%20-%20clip%205.mov"
                 controls="true"
                 width="100%"
                 height="100%"
               />
-            </div>
-          </div>
 
-          <div className="col-lg-5">
-            <h1>Final Question</h1>
-            <p>
-              We are picking up from social media that a former employee has
-              just said this was “a situation waiting to happen” and that he
-              shared his concerns with managers but was ignored.
-            </p>
-            <p>Can you tell our viewers why that was?</p>
+</Modal>
+
+        <div className="row align-items-top my-5">
+          <div className="col-lg-12">
+            <div className="player-wrapper">
+
+            </div>
           </div>
         </div>
         <div className="row align-items-top my-5">

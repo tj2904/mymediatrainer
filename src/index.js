@@ -13,7 +13,8 @@ import {
   VideoSelectResponse,
   VideoUpload,
   CyberInterview,
-  Exit
+  Exit,
+  Modal2
 } from "./components";
 
 ReactDOM.render(
@@ -35,6 +36,7 @@ ReactDOM.render(
           <Route path="/CyberInterview" element={<CyberInterview />} />
           <Route path="/upload" element={<VideoUpload />} />
           <Route path="/exit" element={<Exit />} />
+          <Route path="/Modal2" element={<Modal2 />} />
         </Routes>
         <Footer />
       </div>

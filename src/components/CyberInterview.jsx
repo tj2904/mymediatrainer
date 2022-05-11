@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Modal } from "react-bootstrap";
 import ReactPlayer from "react-player/lazy";
 import Quiz from "react-quiz-component";
 import { NavLink } from "react-router-dom";
@@ -121,27 +122,35 @@ function CyberInterview() {
     setShowFinalPage(true);
   };
 
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
+
   return (
     // Display the intro video in a react-player component
     <div className="videoSingleText">
       <div className="container">
+        <Modal
+          show={show}
+          centered="true"
+          size="xl"
+          fullscreen="true"
+          animation="true"
+          onHide={handleClose}
+          keyboard="true"
+        >
+          <ReactPlayer
+            className="react=player"
+            url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/AllQuestions-with%20Titles.mp4?alt=media&token=43fa511a-3b69-47f2-85ca-d19200e6e854"
+            controls="true"
+            width="100%"
+            height="100%"
+            playing="true"
+          />
+        </Modal>
+
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
-            <div className="player-wrapper">
-              <ReactPlayer
-                className="react=player"
-                url="https://firebasestorage.googleapis.com/v0/b/mymediatrainer-ce185.appspot.com/o/AllQuestions-with%20Titles.mp4?alt=media&token=43fa511a-3b69-47f2-85ca-d19200e6e854"
-                controls="true"
-                width="100%"
-                height="100%"
-              />
-            </div>
-          </div>
-          <div className="col-lg-5">
-            {/* new div for the text next to the video, the class means it will wrap on small screens below the video */}
-            <h1>Cyber Incident Response</h1>
-            Play the video to hear the question from the journalist. Then start
-            the interview and select the best of the responses below.
+          <div className="col-lg-12">
+            <div className="player-wrapper"></div>
           </div>
         </div>
 

@@ -35,6 +35,7 @@ function Navigation() {
                   Cyber Scenario
                 </NavLink>
               </li>
+
             </ul>
           </div>
         </div>

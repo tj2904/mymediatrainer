@@ -3,6 +3,7 @@ import ReactPlayer from "react-player/lazy";
 import { useNavigate } from "react-router-dom";
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { Modal } from "react-bootstrap";
 
 function VideoSingleTextQuestion() {
   const navigate = useNavigate();
@@ -31,38 +32,33 @@ function VideoSingleTextQuestion() {
       });
   };
 
+  const [show, setShow] = useState(true);
+  const handleClose = () => setShow(false);
+
   return (
     <div className="videoSingleText">
       <div className="container">
+        <Modal
+          show={show}
+          centered="true"
+          size="xl"
+          fullscreen="true"
+          animation="true"
+          onHide={handleClose}
+          keyboard="true"
+        >
+          <ReactPlayer
+            className="react=player"
+            url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AAAC8Y4TkuMXZHCsiB0G9alEa/Interview%20-%20clip%204.mov"
+            controls="true"
+            width="100%"
+            height="100%"
+          />
+        </Modal>
+
         <div className="row align-items-top my-5">
-          <div className="col-lg-7">
-            <div className="player-wrapper">
-              <ReactPlayer
-                className="react=player"
-                url="https://www.dropbox.com/sh/u14d3axzv3a0nol/AAAC8Y4TkuMXZHCsiB0G9alEa/Interview%20-%20clip%204.mov"
-                controls="true"
-                width="100%"
-                height="100%"
-              />
-            </div>
-          </div>
-          <div className="col-lg-5">
-            <h1>Cyber Scenario</h1>
-            <p>How would you answer this question? </p>{" "}
-            <p>Jot down your response in a short sentence or two. </p>
-            <p>
-              <strong> Maximum allowed time on this task: 60 seconds</strong>{" "}
-            </p>
-            <p>
-              That’s all very well but doesn’t the fact that this could happen
-              suggest that you just aren’t taking your customers’ privacy
-              seriously?
-            </p>
-            <p>
-              How would you feel if your personal data was put up for sale on
-              the dark web by criminals? I’m assuming you’re not one of the
-              customers affected - are you?
-            </p>
+          <div className="col-lg-12">
+            <div className="player-wrapper"></div>
           </div>
         </div>
 
