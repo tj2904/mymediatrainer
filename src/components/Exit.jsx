@@ -14,6 +14,7 @@ function Exit() {
                 controls="true"
                 width="100%"
                 height="100%"
+                playing="true"
               />
             </div>
           </div>
